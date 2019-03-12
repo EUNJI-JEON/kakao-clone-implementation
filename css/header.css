@@ -1,0 +1,55 @@
+/* position:fixed해주고 width:100%로 지정. width 저렇게 안하면 모양이 쪼그라듬.
+z-index 대체 무엇? */
+.top-header{
+  background-color: #523737;
+  color: white;
+  padding:5px 10px 15px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index:9;
+}
+
+.top-header a{
+  color: white;
+}
+/* 'top-header .header__top', 'top-header .header__column' 는 사실
+'header__top',  '.header__column 이렇게만 해줘도 됨.
+근데 .father .children {} 형식으로 써주는 게 더 구체적이긴 함. */
+.top-header .header__top,
+.top-header .header__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-header .header__top {
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.top-header .header__bottom {
+  margin: 0 10px;
+}
+
+.top-header .header__column{
+  width: 33%;
+}
+
+.top-header .header__bottom .header__column:first-child{
+  color: rgba(255, 255,255, 0.5);
+}
+/* width:33%하면 오른쪽 상단에 있는 아이콘 부분들이 안맞기 땜에 last-child 해줌.
+last-child는 top-header에서 모든 칼럼들 중에 마지막 칼럼을 의미. 즉 배터리 칼럼과 나사모양 아이콘 선택. */
+.top-header .header__column:last-child{
+  text-align:right;
+}
+
+/* 가운데 있는 18:38이랑 friends1이 가운데로 정렬되어야함. 이를 위해 그 아이템들을 선택해야 하는데,
+second child같은 선택 방법이 없으므로 nth-child(2)를 이용해서 선택. */
+.top-header .header__column:nth-child(2){
+  text-align: center;
+}
+
+/* 이제 friends 다음에 숫자 1이 노란색이 되도록 바꿔주기 */
+.top-header .header__number{
+  color: yellow;
+}

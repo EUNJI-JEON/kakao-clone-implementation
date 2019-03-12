@@ -1,0 +1,77 @@
+.top-header--transparent{
+  background-color: transparent;
+}
+
+/* vh는 view for height를 의미하므로 80vh는 스크린의 80%라는 뜻;
+flex-direction이 column이므로 justify-content가 flex-end, align-items: center가 ;. */
+.profile .profile__header{
+  height: 80vh;
+  background-color: #d6cb06;
+  width: 100%;
+  position: relative;
+  top: -60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.profile__header .profile__header-container{
+  text-align: center;
+  position: relative;
+  bottom: -60px;
+}
+
+/* 이미지와 닉네임 사이의 간격-margin-bottom */
+.profile__header-container img{
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* 이름과 이메일 사이의 간격 margin-top으로 조정 */
+.profile .profile__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* 이메일과 버튼 사이의 간격 margin-bottom으로 조정 */
+.profile__container input{
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile__actions{
+  display: flex;
+}
+
+/* 두 아이콘 사이의 간격은 margin-right으로 설정하고
+아이콘에 커서 갖다댔을 때 커서 모양 바뀌게 하기 위해 cursor:pointer; 추가
+반대로 cursor: not-allowed; 로 하면 해당 커서 갖다댔을 때 x표시 뜸*/
+.profile__action{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* 두 아이콘의 동그란 배경 설정
+아이콘부터 텍스트까지의 간격은 margin-bottom으로 설정*/
+.profile__action-circle{
+  background-color: #F2F2F2;
+  padding: 15px;
+  border-radius: 50%;
+  color: #523737;
+  margin-bottom:15px;
+}
+
+.profile__action-title{
+  font-size: 10px;
+  font-weight: 600;
+  color:#8c8c8c;
+}

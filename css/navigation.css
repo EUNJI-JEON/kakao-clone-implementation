@@ -1,0 +1,37 @@
+/* 네비게이션 컬러 회색이니까 이에 맞춰서 적용해주기
+색상 가져온 거는 구글 크롬 익스텐션.
+네비게이션은 재밌는 게 포지션이 fixed라 항상 그 자리에 있음*/
+.tab-bar{
+  background-color: #F7F7F7;
+  position: fixed;
+  width: 100%;
+  bottom:0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #c1c1c1;
+  padding:10px 30px 5px 30px;
+
+}
+
+.tab-bar .tab-bar__tab{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #c1c1c1;
+}
+
+.tab-bar .tab-bar__tab i {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.tab-bar .tab-bar__title{
+  font-size: 10px;
+}
+
+.tab-bar .tab-bar__tab--selected{
+  color: #523737;
+}

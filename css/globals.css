@@ -1,0 +1,10 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* box-sizing 관련 링크:https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+* {
+  box-sizing: border-box;
+}
