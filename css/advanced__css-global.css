@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
+/* 모든 html의 main에 애니메이션 효과 주기 */
+main{
+  animation: .5s bodyPopIn ease-in-out;
+}
+
+/* translateX면 X축(평행) 이동, translateY하면 Y축(수직)이동. */
+@keyframes bodyPopIn{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* box-sizing 관련 링크:https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+* {
+  box-sizing: border-box;
+}

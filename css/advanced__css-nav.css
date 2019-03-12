@@ -1,0 +1,41 @@
+.tab-bar{
+  background-color: #F7F7F7;
+  position: fixed;
+  width: 100%;
+  bottom:0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #c1c1c1;
+  padding:10px 30px 5px 30px;
+
+}
+
+/* 해당 트랜스폼에 트랜지션 효과 주기 */
+.tab-bar .tab-bar__tab{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #c1c1c1;
+  transition:transform .3s linear;
+}
+
+/* hover했을 때 아이콘들 1.1배 커지게 만들어주기 -transform: scale(1.1)*/
+.tab-bar .tab-bar__tab:hover{
+  transform: scale(1.1);
+}
+
+.tab-bar .tab-bar__tab i {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.tab-bar .tab-bar__title{
+  font-size: 10px;
+}
+
+.tab-bar .tab-bar__tab--selected{
+  color: #523737;
+}

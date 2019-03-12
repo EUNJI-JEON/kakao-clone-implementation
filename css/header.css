@@ -7,7 +7,7 @@ z-index 대체 무엇? */
   position: fixed;
   width: 100%;
   top: 0;
-  z-index:9;
+  z-index:2;
 }
 
 .top-header a{

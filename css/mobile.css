@@ -1,0 +1,7 @@
+/* 폭이 530px보다 커지면 화면 작게 만들라는 스크린이 뜨도록 해주기 */
+/* 폰이 landscape일 때와 portrait일 때는 and 쓰고 orientation:landscape 이나 orientation:portrait으로 해주면 됨  */
+@media screen and (min-width:530px){
+  .bigScreenText{
+    display: flex;
+  }
+}

@@ -1,0 +1,82 @@
+/* 채팅 리스트는 하단에 보더가 있으므로 border-bottom 추가해주기 */
+.chats .chats__list{
+  border-top: 1px solid #ebebeb;
+}
+
+/* 그리고 모든 채팅 리스트에도 보더-하단을 동일하게 깔아주기. */
+.chats__list .chats__chat{
+  padding:15px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* 프사는 오른쪽으로 마진이 있으므로 마진-오른쪽 15px */
+.chats__chat .chat__content img{
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.chats__list .chats__chat a{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color:inherit;
+}
+
+/* 프사 안찌그러지게 하려면 align-items: flex-start; */
+
+.chats__chat .chat__content{
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 채팅창 미리보기의 경우 유저이름 색깔은 검정색.
+유저네임과 텍스트 사이에 공간 주기 위해 margin 줘야함*/
+.chat__preview .chat__user{
+  color:black;
+  font-weight:600;
+  margin-bottom: 5px;
+}
+
+/* 마지막으로 수신한 채팅메세지의 경우 색상은 friends 페이지의 헤더와 동일하게 함
+그리고 메세지 크기를 작게 하기 위해 font-size:11px */
+.chat__preview .chat__last-message{
+  color:#b4b4b4;
+  font-size:11px;
+}
+
+/* date의 크기를 작게 바꿔주기 */
+.chats__chat .chat__date-time{
+  font-size: 10px;
+  color: #b4b4b4;
+}
+
+/* 카카오 노랑 채팅 버튼 만들기. font-size로 아이콘 크기 조정.
+box-shadow: 좌우0, 하단3, 흐리게보이는효과 10px,rgba로 색상은 검정으로
+color로 아이콘 색 조정.스크롤 내려도 버튼 보이게 position: fixed
+그리고 transition은 여러개 할 때 꼭 콤마로 구분해야함*/
+.chat-btn{
+  width: 60px;
+  height: 60px;
+  background-color: #ffe94a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  font-size: 20px;
+  color: #523737;
+  cursor:pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  /* transition과 transform 결합하기 */
+  transition: color .3s, background .3s, transform .5s ease-in-out;
+}
+
+/* transform에서 rotate대신 rotateY를 해볼 수도 있고 turn대신 180deg, 30deg이런식으로 할 수 있음. */
+.chat-btn:hover{
+  color:white;
+  background: #523737;
+  transform: rotate(1turn)
+}
